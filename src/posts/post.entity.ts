@@ -5,7 +5,7 @@ export class Posts {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ length: 500 })
+  @Column()
   title: string;
 
   @Column()
