@@ -2,19 +2,19 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { CreatePostDto } from './dto/create-post.dto';
 import { Repository } from 'typeorm';
-import { Posts } from './post.entity';
+import { PostModel } from './post_model.entity';
 
 @Injectable()
 export class PostsService {
   constructor(
-    @InjectRepository(Posts)
-    private readonly postRepository: Repository<Posts>,
+    @InjectRepository(PostModel)
+    private readonly postRepository: Repository<PostModel>,
   ) {}
   async create(createPostDto: CreatePostDto) {
     return await this.postRepository.save(createPostDto)
   }
 
-  async findAll(): Promise<Posts[]> {
+  async findAll(): Promise<PostModel[]> {
     return await this.postRepository.find();
   }
 }

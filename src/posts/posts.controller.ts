@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body } from '@nestjs/common';
 import { CreatePostDto } from './dto/create-post.dto';
 import { PostsService } from './posts.service';
-import { Posts } from './post.entity';
+import { PostModel } from './post_model.entity';
 
 @Controller('/posts')
 export class PostsController {
@@ -11,7 +11,7 @@ export class PostsController {
     return this.postsService.create(createPostDto);
   }
   @Get()
-  findAll(): Promise<Posts[]> {
+  findAll(): Promise<PostModel[]> {
     return this.postsService.findAll();
   }
 
