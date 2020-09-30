@@ -4,7 +4,7 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'path';
 import { PostsModule } from './posts/posts.module';
-import { UserModule } from './users/user.module';
+import { UserModule } from './user/user.module';
 
 
 
