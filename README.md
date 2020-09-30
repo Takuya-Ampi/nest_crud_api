@@ -3,6 +3,8 @@ $ docker-compose up -d
 
 // docker psでコンテナ起動確認  
 
+// コンテナ内に入ってwatch modeで起動
+
 $ docker exec -it nest_crud_api_nest-app-web_1 npm run start:dev   
 
 // localhost:3040でアクセス  
