@@ -1,8 +1,8 @@
 # 開発スタート(ルートディレクトリ)
-$ docker-compose up -d
-// docker psでコンテナ起動確認
-$ npm run start:dev 
-// localhost:3040でアクセス
+$ docker-compose up -d  
+// docker psでコンテナ起動確認  
+$ npm run start:dev   
+// localhost:3040でアクセス  
 
 
 # nstallation
