@@ -2,8 +2,10 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { join } from 'path'; 
+import { join } from 'path';
 import { PostsModule } from './posts/posts.module';
+import { UserModule } from './users/user.module';
+
 
 
 @Module({
@@ -17,7 +19,7 @@ import { PostsModule } from './posts/posts.module';
     entities: [join(__dirname, '**/**.entity{.ts,.js}')],
     synchronize: true,
     keepConnectionAlive: true,
-  }), PostsModule],
+  }), PostsModule, UserModule],
   controllers: [AppController],
   providers: [AppService],
 })

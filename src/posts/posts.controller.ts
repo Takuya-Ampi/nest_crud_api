@@ -3,7 +3,7 @@ import { CreatePostDto } from './dto/create-post.dto';
 import { PostsService } from './posts.service';
 import { PostModel } from './post_model.entity';
 
-@Controller('/posts')
+@Controller('posts')
 export class PostsController {
   constructor(private readonly postsService: PostsService) {}
   @Post()
