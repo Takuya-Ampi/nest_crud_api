@@ -8,7 +8,7 @@ $ npm run start:dev
 // localhost:3040でアクセス  
 
 
-# nstallation
+# Installation
 $ npm install
 Running the app
 # development
