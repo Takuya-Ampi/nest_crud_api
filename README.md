@@ -3,7 +3,7 @@ $ docker-compose up -d
 
 // docker psでコンテナ起動確認  
 
-$ npm run start:dev   
+$ docker exec -it nest-app-web npm run start:dev   
 
 // localhost:3040でアクセス  
 
