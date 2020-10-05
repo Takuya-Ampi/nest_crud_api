@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'path';
 import { PostsModule } from './posts/posts.module';
 import { UserModule } from './user/user.module';
+import { ProductModule } from './product/product.module';
 
 
 
@@ -19,7 +20,7 @@ import { UserModule } from './user/user.module';
     entities: [join(__dirname, '**/**.entity{.ts,.js}')],
     synchronize: true,
     keepConnectionAlive: true,
-  }), PostsModule, UserModule],
+  }), PostsModule, UserModule, ProductModule],
   controllers: [AppController],
   providers: [AppService],
 })
