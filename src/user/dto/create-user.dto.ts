@@ -13,4 +13,9 @@ export class CreateUserDto {
   @IsString()
   @IsNotEmpty()
   readonly email!:string
+  @IsString()
+  @IsNotEmpty()
+  @MinLength(1)
+  @MaxLength(20)
+  readonly password!:string
 }
