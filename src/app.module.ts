@@ -3,7 +3,6 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'path';
-import { PostsModule } from './posts/posts.module';
 import { UserModule } from './user/user.module';
 import { ProductModule } from './product/product.module';
 
@@ -20,7 +19,7 @@ import { ProductModule } from './product/product.module';
     entities: [join(__dirname, '**/**.entity{.ts,.js}')],
     synchronize: true,
     keepConnectionAlive: true,
-  }), PostsModule, UserModule, ProductModule],
+  }), UserModule, ProductModule],
   controllers: [AppController],
   providers: [AppService],
 })
